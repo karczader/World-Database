@@ -24,13 +24,10 @@
                 echo "Error databases connection";
                 }
                 else{               
-                     
-                    $sql="SELECT * FROM country";
+                    $sql="SELECT * FROM city";
                     if($results = @$connection->query($sql)){
                         while($row=mysqli_fetch_assoc($results)){
-                            echo $row['Code']." - <b>".$row['Name']."</b>, ".$row['Continent']." ".$row['Population']." "."</br>";
-                        }
-                    }
+                            echo $row['ID']." - <b>".$row['Name']."</b>, ".$row['District']." ".$row['Population']." "."</br>";
                     $connection->close();
                 }
                 ?>
